@@ -1,0 +1,13 @@
+.container{
+    background-color: green;
+}
+
+.content{
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item{
+    background-color: yellow;
+}
