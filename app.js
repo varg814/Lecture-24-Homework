@@ -24,30 +24,28 @@ let index = 0;
 let index2 = 0;
 
 let secondsInterval = setInterval(() => {
-  secondsContent--;
-  seconds.innerHTML = secondsContent;
   index++;
   index2++;
   if (secondsContent === 0) {
     secondsContent = 60;
   }
+  secondsContent--;
+  seconds.innerHTML = secondsContent;
 
+  if (minutesContent === 0) {
+    minutesContent = 60;
+  }
   if (secondsContent === 59) {
     minutesContent--;
     minutes.innerHTML = minutesContent;
   }
 
-  if (minutesContent === 0) {
-    minutesContent = 60;
+  if (hoursContent === 0) {
+    hoursContent = 24;
   }
-
   if (index === secondsC + minutesC * 60 + 1) {
     hoursContent--;
     hours.innerHTML = hoursContent;
-  }
-
-  if (hoursContent === 0) {
-    hoursContent = 24;
   }
 
   if (index > secondsC + minutesC * 60 + 1) {
@@ -68,8 +66,21 @@ let secondsInterval = setInterval(() => {
     hoursCC = 23;
   }
 
-  console.log(index);
-  console.log(secondsC + minutesC * 60 + 1);
-  console.log(index2);
-  console.log(secondsCC + minutesCC * 60 + hoursCC * 3600 + 1);
+  if (
+    days.innerHTML == 0 &&
+    hours.innerHTML == 0 &&
+    minutes.innerHTML == 0 &&
+    seconds.innerHTML == 0
+  ) {
+    clearInterval(secondsInterval);
+  }
 }, 1000);
+
+if (
+  days.innerHTML == 0 &&
+  hours.innerHTML == 0 &&
+  minutes.innerHTML == 0 &&
+  seconds.innerHTML == 0
+) {
+  clearInterval(secondsInterval);
+}

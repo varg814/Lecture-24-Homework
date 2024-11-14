@@ -1,13 +1,93 @@
-.container{
-    background-color: green;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.content{
-    background-color: red;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url("./imgs/Screenshot\ 2024-11-14\ 205911.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: Red Hat Text;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 29.11px;
+  letter-spacing: 7.5px;
+  text-align: center;
+  color: white;
+}
+.container {
+  width: 100%;
+  max-width: 688px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin: 20px;
+  padding-top: 140px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  font-family: Red Hat Text;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -2.4000000953674316px;
+  text-align: center;
+  color: #fb5e84;
+}
+
+.item > p {
+  font-family: Red Hat Text;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.52px;
+  letter-spacing: 5.918749809265137px;
+  color: #8385a9;
+}
+
+.icons{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 150px;
+    color: #8385A9;
 }
 
-.item{
-    background-color: yellow;
+i:hover{
+    color: #fb5e84;
+}
+
+@media (max-width: 530px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .item {
+    font-family: Red Hat Text;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1.0800000429153442px;
+  }
+
+  .item > p {
+    font-family: Red Hat Text;
+    font-size: 7px;
+    font-weight: 700;
+    line-height: 9.26px;
+    letter-spacing: 2.9593749046325684px;
+  }
 }
